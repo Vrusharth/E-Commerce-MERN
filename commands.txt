@@ -1,0 +1,21 @@
+
+npm init -y
+
+npm install express mongoose dotenv
+
+in server.js create app
+
+npm install nodemon
+
+// start the server
+nodemon .\Backend\server.js
+
+
+//password : 6dKNgYRoyF9wZ47A
+// mongo db 
+Mongo_URI=mongodb+srv://vrusharth2003:<6dKNgYRoyF9wZ47A>@cluster0.3qm04.mongodb.net/products?retryWrites=true&w=majority&appName=Cluster0
+
+mongo --username <vrusharth2003> --password <6dKNgYRoyF9wZ47A> --authenticationDatabase admin
+
+
+
