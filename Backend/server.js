@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { connectdb } from './config/db.js';
-import productRoutes from './routes/product.routes.js';
+import { connectdb } from './db.js';
+import productRoutes from './routes/productroutes.js';
 
 
 
@@ -12,11 +12,11 @@ const app = express();
 app.use(express.json()); // Middleware to parse JSON
 
 app.use("/api/products", productRoutes); // Use the product routes
-
+const PORT=process.env.PORT || 5000
 // Connect to MongoDB and start the server
 connectdb().then(() => {
-  app.listen(5000, () => {
-    console.log('Server is started at http://localhost:5000');
+  app.listen(PORT, () => {
+    console.log('Server is started at http://localhost:', + PORT);
   });
 }).catch(error => {
   console.error("Failed to connect to MongoDB:", error);
